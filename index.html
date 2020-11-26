@@ -13,16 +13,18 @@
     </script>
     <script>
       var userEmail = '';
+	    
+	function sendBackMessage(){
+		unityInstance.SendMessage("Bridge", "SendToUnity", userEmail);
+		console.log("Sending message to Unity " + userEmail);
+      }
+	    
       window.onmessage = (event) => {
       if (event.data) {
       	userEmail = event.data;
       }
       };
 
-      function sendBackMessage(){
-		unityInstance.SendMessage("Bridge", "SendToUnity", userEmail);
-		console.log("Sending message to Unity " + userEmail);
-      }
     </script>
   </head>
   <body>
