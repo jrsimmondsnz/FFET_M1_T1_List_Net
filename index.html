@@ -9,10 +9,10 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FFETM1_T1_List.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FFETM1_T1_List.json");
     </script>
 	<script>
-      var userEmail = 'joe@fourfoxcreative.com';
+      var userEmail = '';
 	  function sendBackMessage(){
 		unityInstance.SendMessage("Bridge", "SendToUnity", userEmail);
 		  console.log("Sending message to Unity " + userEmail);
