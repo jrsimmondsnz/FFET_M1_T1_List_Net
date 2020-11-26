@@ -11,18 +11,18 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FFETM1_T1_List.json");
     </script>
-	<script>
-            var userEmail;
+    <script>
+      var userEmail;
       window.onmessage = (event) => {
-        if (event.data) {
-          //document.getElementById("theLabel").innerHTML = event.data;
-          userEmail = event.data;
-        }
-	      
-	  function sendBackMessage(){
+      if (event.data) {
+      	userEmail = event.data;
+      }
+	</script> 
+	  <script>
+      function sendBackMessage(){
 		unityInstance.SendMessage("Bridge", "SendToUnity", userEmail);
-		  console.log("Sending message to Unity " + userEmail);
-	  }
+		console.log("Sending message to Unity " + userEmail);
+      }
     </script>
   </head>
   <body>
