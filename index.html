@@ -3,28 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | HTMLBridge</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <title>Unity WebGL Player | FFETM1_Listen</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FFETM1_T1_List.json");
+      UnityLoader.instantiate("unityContainer", "Build/FFETM1_T1_Prac.json");
     </script>
-    <script>
+	<script>
       var userEmail = 'joe@fourfoxcreative.com';
-	    
-	function sendBackMessage(){
+	  function sendBackMessage(){
 		unityInstance.SendMessage("Bridge", "SendToUnity", userEmail);
-		console.log("Sending message to Unity " + userEmail);
-      }
-	    
-      window.onmessage = (event) => {
-      if (event.data) {
-      	userEmail = event.data;
-      }
-      };
-
+		  console.log("Sending message to Unity " + userEmail);
+	  }
     </script>
   </head>
   <body>
